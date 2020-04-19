@@ -10,8 +10,9 @@ module.exports.zip = async function ziplogs() {
   const logdir = path.join(__dirname, "../logs");
   const zipdir = path.join(__dirname, "../logs.zip");
   const tmpdir = path.join(__dirname, "../tmp");
-  await fs.ensureFile(zipdir);
-  await extract(zipdir, { dir: tmpdir });
+  if (await fs.exists(zipdir)) {
+    await extract(zipdir, { dir: tmpdir });
+  }
   await fs.copy(logdir, tmpdir);
   await zip(tmpdir, zipdir);
   await fs.remove(tmpdir);
