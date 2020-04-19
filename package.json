@@ -1,0 +1,24 @@
+{
+  "name": "flying-squid-template",
+  "version": "1.0.0",
+  "description": "A minecraft server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cli-spinners": "^2.3.0",
+    "colors": "^1.4.0",
+    "extract-zip": "^2.0.0",
+    "flying-squid": "^1.1.2",
+    "fs-extra": "^9.0.0",
+    "log-symbols": "^3.0.0",
+    "ora": "^4.0.3",
+    "semver": "^7.3.2",
+    "zip-a-folder": "0.0.12"
+  }
+}
